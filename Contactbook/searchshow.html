@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button><a href="{{url_for('home')}}">BACK TO HOME</a></button><br><br><br>
+    <table border="1" align="center" "5px" cellpadding="5px" width="60%" height="20%">
+        <tr style="background-color: yellow;">
+            <th>ID</th>
+            <th>NAME</th>
+            <th>MOBILE NO</th>
+            <th>E-MAIL</th>
+            <th>ADDRESS</th>
+           
+          
+
+        </tr>
+        {% for data in datas %}
+            <tr>
+                <td>{{data.cid}}</td>
+                <td>{{data.cname}}</td>
+                <td>{{data.cno}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.address}}</td>
+     
+              
+
+
+            </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>
